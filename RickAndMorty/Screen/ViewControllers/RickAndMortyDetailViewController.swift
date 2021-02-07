@@ -68,6 +68,7 @@ extension RickAndMortyDetailViewController: RickAndMortyDetailViewModelDelegate 
 		DispatchQueue.main.async { [weak self] in
 			guard let self = self else { return }
 			
+			self.title = characterModel.name
 			self.nameLabel.text = characterModel.name
 			self.statusLabel.text = "Status: \(characterModel.status?.rawValue ?? "")"
 			self.statusLabel.textColor = self.statusLabelColor(status: characterModel.status ?? .unknown)
