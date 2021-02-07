@@ -50,6 +50,7 @@
 		E740621125D03A8A00DC8DA0 /* RickAndMortyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740621025D03A8900DC8DA0 /* RickAndMortyDetailViewModel.swift */; };
 		E740621425D03A9800DC8DA0 /* RickAndMortyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740621325D03A9800DC8DA0 /* RickAndMortyDetailViewController.swift */; };
 		E740621725D03AAB00DC8DA0 /* RickAndMortyDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740621625D03AAB00DC8DA0 /* RickAndMortyDetailViewModelDelegate.swift */; };
+		E7C53A9325D05F9C00D37D09 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E7C53A9225D05F9C00D37D09 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		E740621025D03A8900DC8DA0 /* RickAndMortyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDetailViewModel.swift; sourceTree = "<group>"; };
 		E740621325D03A9800DC8DA0 /* RickAndMortyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDetailViewController.swift; sourceTree = "<group>"; };
 		E740621625D03AAB00DC8DA0 /* RickAndMortyDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDetailViewModelDelegate.swift; sourceTree = "<group>"; };
+		E7C53A9225D05F9C00D37D09 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				E740615F25CF38A500DC8DA0 /* RickAndMorty */,
 				E740615E25CF38A500DC8DA0 /* Products */,
+				E7C53A9225D05F9C00D37D09 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -430,6 +433,7 @@
 				E740616D25CF38A900DC8DA0 /* LaunchScreen.storyboard in Resources */,
 				E74061F025CFDD2C00DC8DA0 /* RickAndMortyListCollectionViewCell.xib in Resources */,
 				E740616A25CF38A900DC8DA0 /* Assets.xcassets in Resources */,
+				E7C53A9325D05F9C00D37D09 /* README.md in Resources */,
 				E740620A25D0182C00DC8DA0 /* RickAndMortyGridCollectionViewCell.xib in Resources */,
 				E74061F325CFE26D00DC8DA0 /* RickAndMortyCollectionViewFooterView.xib in Resources */,
 				E740616825CF38A500DC8DA0 /* RickAndMorty.storyboard in Resources */,
