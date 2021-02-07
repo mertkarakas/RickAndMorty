@@ -99,26 +99,22 @@ final class RickAndMortyViewController: BaseViewController {
 		
 		var collectionViewCurrentOffset = self.collectionView.contentOffset.y
 		
-		UIView.animate(withDuration: self.animationDuration) { [weak self] in
-			self?.collectionView.reloadData()
-			self?.collectionView.collectionViewLayout.invalidateLayout()
-			UIScreen.main.snapshotView(afterScreenUpdates: true)
-			self?.collectionView.setCollectionViewLayout(layout, animated: true)
-		} completion: { [weak self] _ in
-			guard let self = self else { return }
-			
-			// Keep the collectionview offset on the same item when the layout change.
-			if collectionViewCurrentOffset == 0 {
-				return
-			}
-			let maxOffset = self.collectionView.contentSize.height - self.collectionView.bounds.height
-			if (collectionViewCurrentOffset / self.layoutScaleForOffset) > maxOffset {
-				collectionViewCurrentOffset = maxOffset
-				self.collectionView.setContentOffset(CGPoint(x: 0, y: collectionViewCurrentOffset), animated: false)
-			}
-			else {
-				self.collectionView.setContentOffset(CGPoint(x: 0, y: self.isGridLayout ? (collectionViewCurrentOffset / self.layoutScaleForOffset) : collectionViewCurrentOffset * self.layoutScaleForOffset), animated: false)
-			}
+		self.collectionView.reloadData()
+		self.collectionView.collectionViewLayout.invalidateLayout()
+		UIScreen.main.snapshotView(afterScreenUpdates: true)
+		self.collectionView.setCollectionViewLayout(layout, animated: false)
+		
+		// Keep the collectionview offset on the same item when the layout change.
+		if collectionViewCurrentOffset == 0 {
+			return
+		}
+		let maxOffset = self.collectionView.contentSize.height - self.collectionView.bounds.height
+		if (collectionViewCurrentOffset / self.layoutScaleForOffset) > maxOffset {
+			collectionViewCurrentOffset = maxOffset
+			self.collectionView.setContentOffset(CGPoint(x: 0, y: collectionViewCurrentOffset), animated: false)
+		}
+		else {
+			self.collectionView.setContentOffset(CGPoint(x: 0, y: self.isGridLayout ? (collectionViewCurrentOffset / self.layoutScaleForOffset) : collectionViewCurrentOffset * self.layoutScaleForOffset), animated: false)
 		}
 	}
 	
