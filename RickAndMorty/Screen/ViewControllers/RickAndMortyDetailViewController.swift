@@ -42,7 +42,7 @@ final class RickAndMortyDetailViewController: BaseViewController {
 	
 	// MARK: - UI
 	
-	func statusLabelColor(status: StatusEnum) -> UIColor {
+	private func statusLabelColor(status: StatusEnum) -> UIColor {
 		
 		switch status {
 		case .alive:
