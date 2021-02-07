@@ -65,7 +65,9 @@ extension RickAndMortyDetailViewController: RickAndMortyDetailViewModelDelegate 
 	
 	func viewUpdate(_ characterModel: RickAndMortyModel) {
 		
-		DispatchQueue.main.async {
+		DispatchQueue.main.async { [weak self] in
+			guard let self = self else { return }
+			
 			self.nameLabel.text = characterModel.name
 			self.statusLabel.text = "Status: \(characterModel.status?.rawValue ?? "")"
 			self.statusLabel.textColor = self.statusLabelColor(status: characterModel.status ?? .unknown)
@@ -77,8 +79,9 @@ extension RickAndMortyDetailViewController: RickAndMortyDetailViewModelDelegate 
 			self.lastSeenEpisodeLabel.text = "Last seen episode name: \(characterModel.lastEpisode?.episodeName ?? "")\nAir Date: \(characterModel.lastEpisode?.episodeAirDate ?? "")"
 
 			self.imageView.setImage(from: characterModel.image ?? "", contentMode: .scaleToFill)
+			
+			self.updateStar(characterModel.isFavorite)
 		}
-		self.updateStar(characterModel.isFavorite)
 	}
 	
 	func updateStar(_ isFavorite: Bool) {
