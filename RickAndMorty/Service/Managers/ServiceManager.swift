@@ -40,7 +40,7 @@ extension ServiceManager {
 			responseModel.rawData = data
 			print(responseModel.json ?? "")
 			
-			if let data = responseModel.data {
+			if responseModel.statusMessage == nil, let data = responseModel.data {
 				completion(Result.success(data))
 			} else {
 				completion(Result.failure(responseModel.error))

@@ -35,14 +35,13 @@ struct BaseResponseModel<T: Codable>: Codable {
 	init(from decoder: Decoder) throws {
 		let keyedContainer = try decoder.container(keyedBy: CodingKeys.self)
 
-		statusMessage = (try? keyedContainer.decode(String.self, forKey: CodingKeys.statusMessage)) ?? ""
-
+		statusMessage = (try? keyedContainer.decode(String.self, forKey: CodingKeys.statusMessage)) ?? nil
 	}
 }
 
 extension BaseResponseModel {
 	
 	private enum CodingKeys: String, CodingKey {
-		case statusMessage = "status_message"
+		case statusMessage = "error"
 	}
 }
