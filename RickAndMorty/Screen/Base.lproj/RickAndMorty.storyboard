@@ -108,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ml-7G-a7m">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="380"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Htu-Fw-nhA">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -180,7 +180,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3ml-7G-a7m" firstAttribute="top" secondItem="aQA-IT-bpD" secondAttribute="top" id="1ls-a2-ZnH"/>
+                                    <constraint firstItem="3ml-7G-a7m" firstAttribute="top" secondItem="aQA-IT-bpD" secondAttribute="top" constant="10" id="1ls-a2-ZnH"/>
                                     <constraint firstItem="3ml-7G-a7m" firstAttribute="width" secondItem="aQA-IT-bpD" secondAttribute="width" id="8iA-mh-v9T"/>
                                     <constraint firstItem="3ml-7G-a7m" firstAttribute="leading" secondItem="aQA-IT-bpD" secondAttribute="leading" id="TiM-oW-eYW"/>
                                     <constraint firstAttribute="bottom" secondItem="3ml-7G-a7m" secondAttribute="bottom" constant="10" id="snU-DP-v0e"/>
